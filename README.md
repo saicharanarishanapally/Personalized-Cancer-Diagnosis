@@ -83,3 +83,115 @@ Constraints:
 ## 2.3. Train, CV and Test Datasets
 
 Split the dataset randomly into three parts train, cross validation and test with 64%,16%, 20% of data respectively
+
+# 3. Exploratory Data Analysis
+
+## 3.1. Reading Data
+### 3.1.1. Reading Gene and Variation Data
+### 3.1.2. Reading Text Data
+### 3.1.3. Preprocessing of text
+
+### 3.1.4. Test, Train and Cross Validation Split
+#### 3.1.4.1. Splitting data into train, test and cross validation (64:20:16)
+#### 3.1.4.2. Distribution of y_i's in Train, Test and Cross Validation datasets
+
+## 3.2 Prediction using a 'Random' Model
+
+In a 'Random' Model, we generate the NINE class probabilites randomly such that they sum to 1.
+
+## 3.3 Univariate Analysis
+
+### 3.2.1 Univariate Analysis on Gene Feature
+
+Q1. Gene, What type of feature it is ?
+
+Ans. Gene is a categorical variable
+
+Q2. How many categories are there and How they are distributed?
+
+
+Q3. How to featurize this Gene feature ?
+
+Ans.there are two ways we can featurize this variable check out this video: https://www.appliedaicourse.com/course/applied-ai-course-online/lessons/handling-categorical-and-numerical-features/
+
+    One hot Encoding
+    Response coding
+
+We will choose the appropriate featurization based on the ML model we use. For this problem of multi-class classification with categorical features, one-hot encoding is better for Logistic regression while response coding is better for Random Forests.
+
+
+Q4. How good is this gene feature in predicting y_i?
+
+There are many ways to estimate how good a feature is, in predicting y_i. One of the good methods is to build a proper ML model using just this feature. In this case, we will build a logistic regression model using only Gene feature (one hot encoded) to predict y_i.
+
+
+Q5. Is the Gene feature stable across all the data sets (Test, Train, Cross validation)?
+
+Ans. Yes, it is. Otherwise, the CV and Test errors would be significantly more than train error.
+
+3.2.2 Univariate Analysis on Variation Feature
+
+Q7. Variation, What type of feature is it ?
+
+Ans. Variation is a categorical variable
+
+Q8. How many categories are there?
+Ans: There are 1933 different categories of variations in the train data, and they are distibuted as follows
+
+
+Q9. How to featurize this Variation feature ?
+
+Ans.There are two ways we can featurize this variable check out this video: https://www.appliedaicourse.com/course/applied-ai-course-online/lessons/handling-categorical-and-numerical-features/
+
+    One hot Encoding
+    Response coding
+
+We will be using both these methods to featurize the Variation Feature
+
+
+Q10. How good is this Variation feature in predicting y_i?
+
+Let's build a model just like the earlier!
+ Q11. Is the Variation feature stable across all the data sets (Test, Train, Cross validation)?
+
+Ans. Not sure! But lets be very sure using the below analysis
+
+
+Q. Is the Text feature stable across all the data sets (Test, Train, Cross validation)?
+
+Ans. Yes, it seems like!
+# 4. Machine Learning Models
+## 4.1. Base Line Model
+### 4.1.1. Naive Bayes
+#### 4.1.1.1. Hyper parameter tuning
+#### 4.1.1.2. Testing the model with best hyper paramters
+#### 4.1.1.3. Feature Importance, Correctly classified point
+
+#### 4.1.1.4. Feature Importance, Incorrectly classified point
+
+## 4.2. K Nearest Neighbour Classification
+### 4.2.1. Hyper parameter tuning
+### 4.2.2. Testing the model with best hyper paramters
+
+### 4.3. Logistic Regression
+### 4.3.1. With Class balancing
+### 4.3.1.1. Hyper paramter tuning
+
+### 4.3.2. Without Class balancing
+#### 4.3.2.1. Hyper paramter tuning
+
+## 4.4. Linear Support Vector Machines
+### 4.4.1. Hyper paramter tuning
+### 4.4.2. Testing model with best hyper parameters
+
+## 4.5 Random Forest Classifier
+### 4.5.1. Hyper paramter tuning (With One hot Encoding)
+### 4.5.3. Hyper paramter tuning (With Response Coding)
+### 4.5.4. Testing model with best hyper parameters (Response Coding)
+
+## 4.7 Stack the models
+### 4.7.1 testing with hyper parameter tuning
+### 4.7.2 testing the model with the best hyper parameters
+
+### 4.7.3 Maximum Voting classifier
+
