@@ -163,35 +163,50 @@ Ans. Yes, it seems like!
 # 4. Machine Learning Models
 ## 4.1. Base Line Model
 ### 4.1.1. Naive Bayes
-#### 4.1.1.1. Hyper parameter tuning
-#### 4.1.1.2. Testing the model with best hyper paramters
-#### 4.1.1.3. Feature Importance, Correctly classified point
-
-#### 4.1.1.4. Feature Importance, Incorrectly classified point
+Log Loss : 1.153235894590452
+Number of missclassified point : 0.38345864661654133
 
 ## 4.2. K Nearest Neighbour Classification
-### 4.2.1. Hyper parameter tuning
-### 4.2.2. Testing the model with best hyper paramters
+Log loss : 1.0324353214410276
+Number of mis-classified points : 0.36466165413533835
 
 ### 4.3. Logistic Regression
 ### 4.3.1. With Class balancing
-### 4.3.1.1. Hyper paramter tuning
-
+Log loss : 1.043318050124558
+Number of mis-classified points : 0.3458646616541353
 ### 4.3.2. Without Class balancing
-#### 4.3.2.1. Hyper paramter tuning
-
+Log loss : 1.062988230671672
+Number of mis-classified points : 0.3533834586466165
 ## 4.4. Linear Support Vector Machines
-### 4.4.1. Hyper paramter tuning
-### 4.4.2. Testing model with best hyper parameters
-
+Log loss : 1.076836039361882
+Number of mis-classified points : 0.3458646616541353
 ## 4.5 Random Forest Classifier
 ### 4.5.1. Hyper paramter tuning (With One hot Encoding)
+Log loss : 1.1978667267936522
+Number of mis-classified points : 0.39473684210526316
 ### 4.5.3. Hyper paramter tuning (With Response Coding)
-### 4.5.4. Testing model with best hyper parameters (Response Coding)
+Log loss : 1.3352069773071837
+Number of mis-classified points : 0.4943609022556391
 
 ## 4.7 Stack the models
-### 4.7.1 testing with hyper parameter tuning
-### 4.7.2 testing the model with the best hyper parameters
+Log loss (train) on the stacking classifier : 0.5386754023282136
+Log loss (CV) on the stacking classifier : 1.138717562146062
+Log loss (test) on the stacking classifier : 1.1742087492677697
+Number of missclassified point : 0.38646616541353385
 
 ### 4.7.3 Maximum Voting classifier
+Log loss (train) on the VotingClassifier : 0.8329702627479129
+Log loss (CV) on the VotingClassifier : 1.1887678593349613
+Log loss (test) on the VotingClassifier : 1.2061284826287209
+Number of missclassified point : 0.3849624060150376
+
+# Logistic regression with CountVectorizer Features, including both unigrams and bigrams
+Log loss : 1.1025061826224287
+Number of mis-classified points : 0.36278195488721804
+
+# adding Variation Feature,Text Feature to improve the performance
+Log loss : 0.9976654523552164
+Number of mis-classified points : 0.3233082706766917
+# Conclusion
+After some feature engineering we manage to decrease the log loss below < 1. We can adopt more feature enginnering methods and reduce the log loss furhermore.
 
